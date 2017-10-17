@@ -15,7 +15,7 @@ svg {
 
 
 #airplane {
-  transform: translateX(23vw);
+  transform: translateX(285px);
 }
 
 /* S 飞机的喷气 */
@@ -168,10 +168,10 @@ body.go #airplane {
 
 @keyframes airplane {
   0% {
-    transform: translateX(23vw)
+    transform: translateX(285px)
   }
   100% {
-    transform: translateX(-10vw)
+    transform: translateX(-120px)
   }
 }
 
