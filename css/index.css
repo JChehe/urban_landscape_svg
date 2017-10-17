@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+   background-color: #8ec8be;
+   text-align: center;
+   /*pointer-events: none;*/
+}
+svg {
+  vertical-align: bottom;
+  max-width: 1080px;
+}
+
+
+#airplane {
+  transform: translateX(23vw);
+}
+
+/* S 飞机的喷气 */
+.airplane__air polygon {
+  opacity: 1
+}
+
+.airplane__air polygon:nth-child(2) {
+  opacity: 0.8
+}
+
+.airplane__air polygon:nth-child(3) {
+  opacity: 0.6
+}
+
+.airplane__air polygon:nth-child(4) {
+  opacity: 0.4
+}
+
+.airplane__air polygon:nth-child(5) {
+  opacity: 0.2
+}
+/* E 飞机的喷气 */
+
+/* S 摩天轮 */
+body.go #ferris-wheel {
+  transform-origin: 50% 50%;
+  animation: rotate 105s linear infinite;
+}
+/* E 摩天轮 */
+
+/* S 太阳光芒 */
+body.go .sun__rays {
+  transform-origin: 50% 50%;
+  animation: rotate 40s linear infinite;
+}
+/* E 太阳光芒 */
+
+/* S 云层-1 */
+body.go #cloud-1 {
+  animation: cloud 26s linear infinite both alternate;
+}
+/* E 云层-1 */
+
+/* S 云层-2 */
+body.go #cloud-2 {
+  animation: cloud 32s linear infinite both alternate;
+}
+/* E 云层-2 */
+
+/* S 云层-3 */
+body.go #cloud-3 {
+  animation: cloud-2 29s linear infinite both alternate;
+}
+/* E 云层-3 */
+
+/* S 热气球 */
+body.go #balloon {
+  animation: balloon 7s infinite both alternate;
+}
+/* E 热气球 */
+
+/* S 飞机 */
+body.go #airplane {
+  animation: airplane 50s linear infinite;
+}
+/* E 飞机 */
+
+
+/* S 红色小车 */
+#car-red {
+  animation: red-car 18s both;
+}
+/* S 红色小车 */
+
+/* S 蓝色小车 */
+#car-blue {
+  animation: blue-car 24s both;
+}
+/* E 蓝色小车 */
+
+/* S 黄色小车 */
+#car-yellow {
+  animation: yellow-car 20s 1s both;
+}
+/* E 黄色小车 */
+
+/* S 小车抖动 */
+.car {
+  animation: car-shake .2s infinite alternate;
+}
+/* E 小车抖动 */
+
+
+/* S URBAN LANDSCAPE */
+#signature path {
+  stroke-dasharray: 63;
+  stroke-dashoffset: 63;
+  animation: dash .8s linear both;
+}
+/* E URBAN LANDSCAPE */
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: .6;
+  }
+}
+
+@keyframes cloud-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-80%);
+    opacity: .6;
+  }
+}
+
+@keyframes balloon {
+  0% {
+    transform: translateY(0%)
+  }
+  30% {
+    transform: translateY(-10%)
+  }
+  100% {
+    transform: translateY(6%)
+  }
+}
+
+@keyframes airplane {
+  0% {
+    transform: translateX(23vw)
+  }
+  100% {
+    transform: translateX(-10vw)
+  }
+}
+
+@keyframes blue-car {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(200%)
+  }
+}
+
+@keyframes red-car {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(200%)
+  }
+}
+
+@keyframes yellow-car {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(-350%)
+  }
+}
+
+@keyframes car-shake {
+  0% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(-1%)
+  }
+}
