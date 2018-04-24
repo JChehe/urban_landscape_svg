@@ -43,6 +43,7 @@ svg {
 /* S 摩天轮 */
 body.go #ferris-wheel {
   transform-origin: 50% 50%;
+  transform-box:fill-box;
   animation: rotate 105s linear infinite;
 }
 /* E 摩天轮 */
@@ -50,6 +51,7 @@ body.go #ferris-wheel {
 /* S 太阳光芒 */
 body.go .sun__rays {
   transform-origin: 50% 50%;
+  transform-box:fill-box;
   animation: rotate 40s linear infinite;
 }
 /* E 太阳光芒 */
@@ -210,6 +212,6 @@ body.go #airplane {
     transform: translateY(0)
   }
   100% {
-    transform: translateY(-1%)
+    transform: translateY(-0.5px)
   }
 }
